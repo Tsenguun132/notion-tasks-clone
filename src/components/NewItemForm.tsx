@@ -16,9 +16,8 @@ export const NewItemForm = ({ onAdd }: NewItemFormProps) => {
         ref={inputRef}
         value={text}
         onChange={(e) => setText(e.target.value)}
-      >
-        <NewItemButton onClick={() => onAdd(text)}>Create</NewItemButton>
-      </NewItemInput>
+      />
+      <NewItemButton onClick={() => onAdd(text)}>Create</NewItemButton>
     </NewItemFormContainer>
   );
 };
