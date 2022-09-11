@@ -43,7 +43,6 @@ const appData: AppState = {
 type AppStateContextProps = {
   lists: List[];
   getTasksByListId(id: string): Task[];
-  children?: ReactNode;
 };
 
 const AppStateContext = createContext<AppStateContextProps>(
@@ -57,7 +56,7 @@ interface Props {
 
 // define context provider
 
-export const AppStateProvider = ({ children }: Props) => {
+export const AppStateProvider: FC<Props> = ({ children }) => {
   const { lists } = appData;
 
   const getTasksByListId = (id: string) => {
@@ -69,4 +68,8 @@ export const AppStateProvider = ({ children }: Props) => {
       {children}
     </AppStateContext.Provider>
   );
+};
+
+export const useAppState = () => {
+  return useContext(AppStateContext);
 };
