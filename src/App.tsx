@@ -41,10 +41,18 @@ export const App = () => {
       </AppContainer>
       <VisitCounter>total visits: {count}</VisitCounter>
       <ItemsInRow>
-        <a href="https://github.com/smokycoffee">
+        <a
+          href="https://github.com/smokycoffee"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={GithubImage} alt="github link :)" />
         </a>
-        <a href="https://github.com/smokycoffee">
+        <a
+          href="https://github.com/smokycoffee"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GithubLinkImage>hi check out my projects :)</GithubLinkImage>
         </a>
       </ItemsInRow>
