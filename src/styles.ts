@@ -37,10 +37,10 @@ export const AppContainer = styled.div`
   background-color: #382d72;
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 80%;
+
+  /* width: 100%; */
   padding: 20px;
-  width: 100%;
-  flex-wrap: initial;
 `;
 
 // column background and sizing
@@ -149,9 +149,6 @@ export const CustomDragLayerContainer = styled.div`
 `;
 
 export const VisitCounter = styled.h3`
-  right: 20px;
-  bottom: 25px;
-  position: absolute;
   color: #dcdde1;
   font-weight: 200;
 `;
@@ -159,6 +156,7 @@ export const VisitCounter = styled.h3`
 export const GithubLinkImage = styled.h3`
   margin-left: 20px;
   color: #dcdde1;
+  font-weight: 200;
 `;
 
 export const ItemsInRow = styled.div`
@@ -168,6 +166,21 @@ export const ItemsInRow = styled.div`
   left: 20px;
   bottom: 20px;
   position: absolute;
+`;
+
+export const AnimatedGifAndVisitCountContainer = styled.div`
+  right: 0px;
+  bottom: 20px;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+`;
+
+export const CatGif = styled.img`
+  width: 300px;
+  height: auto;
+  clip-path: circle(120px at center);
 `;
 
 // test colors

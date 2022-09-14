@@ -4,6 +4,8 @@ import {
   VisitCounter,
   GithubLinkImage,
   ItemsInRow,
+  AnimatedGifAndVisitCountContainer,
+  CatGif,
 } from "./styles";
 import { Column } from "./components/Column";
 import { AddNewItem } from "./components/AddNewItem";
@@ -13,6 +15,8 @@ import { CustomDragLayer } from "./components/CustomDragLayer";
 import countapi from "countapi-js";
 import { useEffect, useState } from "react";
 import GithubImage from "./GitHub-Mark-Light-64px.png";
+import AnimatedCatGif from "./1451528851animated-cat-art-gif-27.gif";
+
 export const App = () => {
   const { lists, dispatch } = useAppState();
   const [count, setCount] = useState(0);
@@ -27,19 +31,24 @@ export const App = () => {
   }, []);
   console.log(count);
   return (
-    <div>
-      <AppContainer>
-        <GlobalStyle />
-        <CustomDragLayer />
-        {lists.map((list) => (
-          <Column text={list.text} key={list.id} id={list.id} />
-        ))}
-        <AddNewItem
-          toggleButtonText="+ add new list"
-          onAdd={(text) => dispatch(addList(text))}
-        />
-      </AppContainer>
-      <VisitCounter>total visits: {count}</VisitCounter>
+    // <div>
+    <AppContainer>
+      <GlobalStyle />
+      <CustomDragLayer />
+      {lists.map((list) => (
+        <Column text={list.text} key={list.id} id={list.id} />
+      ))}
+      <AddNewItem
+        toggleButtonText="+ add new list"
+        onAdd={(text) => dispatch(addList(text))}
+      />
+
+      <AnimatedGifAndVisitCountContainer>
+        <VisitCounter>total visits: {count}</VisitCounter>
+        <CatGif src={AnimatedCatGif} alt="cat gif" />
+        {/* <p>I'm not distracting at all :)</p> */}
+      </AnimatedGifAndVisitCountContainer>
+
       <ItemsInRow>
         <a
           href="https://github.com/smokycoffee"
@@ -56,7 +65,8 @@ export const App = () => {
           <GithubLinkImage>hi check out my projects :)</GithubLinkImage>
         </a>
       </ItemsInRow>
-    </div>
+    </AppContainer>
+    // </div>
   );
 };
 
