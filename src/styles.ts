@@ -110,10 +110,13 @@ export const NewItemButton = styled.button`
   background-color: #382d72;
   border-radius: 3px;
   border: none;
+  margin-left: 0.25rem;
   box-shadow: none;
-  color: #fff;
+  color: #b7c2c6;
   padding: 6px 12px;
   text-align: center;
+  font-family: "Circular Std", Courier, monospace;
+  font-size: 1rem;
 `;
 //styles for input
 export const NewItemInput = styled.input`
@@ -145,15 +148,23 @@ export const CustomDragLayerContainer = styled.div`
   z-index: 100;
 `;
 
-export const VisitCounter = styled.h2`
+export const VisitCounter = styled.h3`
   right: 20px;
-  bottom: 10px;
+  bottom: 25px;
   position: absolute;
   color: #dcdde1;
   font-weight: 200;
 `;
 
-export const GithubLinkImage = styled.img`
+export const GithubLinkImage = styled.h3`
+  margin-left: 20px;
+  color: #dcdde1;
+`;
+
+export const ItemsInRow = styled.div`
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
   left: 20px;
   bottom: 20px;
   position: absolute;

@@ -3,6 +3,7 @@ import {
   GlobalStyle,
   VisitCounter,
   GithubLinkImage,
+  ItemsInRow,
 } from "./styles";
 import { Column } from "./components/Column";
 import { AddNewItem } from "./components/AddNewItem";
@@ -39,9 +40,14 @@ export const App = () => {
         />
       </AppContainer>
       <VisitCounter>total visits: {count}</VisitCounter>
-      <a href="https://github.com/smokycoffee">
-        <GithubLinkImage src={GithubImage} alt="github link :)" />
-      </a>
+      <ItemsInRow>
+        <a href="https://github.com/smokycoffee">
+          <img src={GithubImage} alt="github link :)" />
+        </a>
+        <a href="https://github.com/smokycoffee">
+          <GithubLinkImage>hi check out my projects :)</GithubLinkImage>
+        </a>
+      </ItemsInRow>
     </div>
   );
 };
