@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import fonts from "./fonts";
+
+export const GlobalStyle = createGlobalStyle`
+  ${fonts}
+`;
 
 interface DragPreviewContainerProps {
   isHidden?: boolean;
@@ -6,7 +11,7 @@ interface DragPreviewContainerProps {
 }
 
 export const DragPreviewContainer = styled.div<DragPreviewContainerProps>`
-  transform: ${(props) => (props.isPreview ? "rotate(5deg)" : undefined)};
+  transform: ${(props) => (props.isPreview ? "rotate(3deg)" : undefined)};
   opacity: ${(props) => (props.isHidden ? 0 : 1)};
 `;
 
@@ -27,18 +32,20 @@ export const DragPreviewWrapper = styled.div.attrs<DragPreviewWrapperProps>(
 
 //container for components and display in a row horizontally
 export const AppContainer = styled.div`
+  font-size: 16px;
   align-items: flex-start;
-  background-color: #3179ba;
+  background-color: #382d72;
   display: flex;
   flex-direction: row;
   height: 100%;
   padding: 20px;
   width: 100%;
+  flex-wrap: initial;
 `;
 
 // column background and sizing
 export const ColumnContainer = styled(DragPreviewContainer)`
-  background-color: #ebecf0;
+  background-color: #5c509c;
   width: 300px;
   min-height: 40px;
   margin-right: 20px;
@@ -50,34 +57,44 @@ export const ColumnContainer = styled(DragPreviewContainer)`
 export const ColumnTitle = styled.div`
   padding: 6px 16px 12px;
   font-weight: bold;
+  color: #dcdde1;
 `;
 // styles for cards
 export const CardContainer = styled(DragPreviewContainer)`
-  background-color: #fff;
+  background-color: #e5ccf4;
   cursor: pointer;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   padding: 0.5rem 1rem;
   max-width: 300px;
   border-radius: 3px;
-  box-shadow: #091e4240 0px 1px 0px 0px;
+  color: #3c373d;
+
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  /* box-shadow: #091e4240 0px 1px 0px 0px; */
 `;
 type AddItemButtonProps = {
   dark?: boolean;
 };
 
 export const AddItemButton = styled.button<AddItemButtonProps>`
-  background-color: #ffffff3d;
+  background-color: ${(props) => (props.dark ? "#382d72" : "#5c509c")};
+  font-weight: 600;
+  /* font-family: "Courier New", Courier, monospace; */
   border-radius: 3px;
   border: none;
-  color: ${(props) => (props.dark ? "#000" : "#fff")};
+  color: ${(props) => (props.dark ? "#b7c2c6" : "#F5CDDE")};
   cursor: pointer;
-  max-width: 300px;
+  max-width: 150px;
   padding: 10px 12px;
   text-align: left;
-  transition: background 85ms ease-in;
+  margin-left: 0.25rem;
+  transition: background 200ms ease-in;
   width: 100%;
+  font-size: 14px;
+
   &:hover {
-    background-color: #ffffff52;
+    background-color: #3a2081;
   }
 `;
 // container for item form
@@ -90,7 +107,7 @@ export const NewItemFormContainer = styled.div`
 `;
 // button style with green and rounded corners
 export const NewItemButton = styled.button`
-  background-color: #5aac44;
+  background-color: #382d72;
   border-radius: 3px;
   border: none;
   box-shadow: none;
@@ -105,7 +122,17 @@ export const NewItemInput = styled.input`
   box-shadow: #091e4240 0px 1px 0px 0px;
   margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
-  width: 90%;
+  width: 86.5%;
+  min-width: auto;
+  overflow-wrap: break-word;
+  outline: none;
+  font-family: "Circular Std", Courier, monospace;
+  background-color: #e5ccf4;
+
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  font-size: 1rem;
+  color: #3c373d;
 `;
 
 export const CustomDragLayerContainer = styled.div`
@@ -117,3 +144,33 @@ export const CustomDragLayerContainer = styled.div`
   width: 100%;
   z-index: 100;
 `;
+
+export const VisitCounter = styled.h2`
+  right: 20px;
+  bottom: 10px;
+  position: absolute;
+  color: #dcdde1;
+  font-weight: 200;
+`;
+
+export const GithubLinkImage = styled.img`
+  left: 20px;
+  bottom: 20px;
+  position: absolute;
+`;
+
+// test colors
+
+//  background-color: #66545e; background
+// background-color: #a39193; columncontainer
+//    background-color: #aa6f73; cardcontainer
+//   background-color: ${(props) => (props.dark ? "#eea990" : "#a39193")}; additem
+//   background-color: #f6e0b5; inputcontainer
+
+// background-color: #66545e;
+//   background-color: #a39193;
+// background-color: #aa6f73;
+//   background-color: ${(props) => (props.dark ? "#eea990" : "#a39193")};
+//   background-color: #5aac44;
+
+// color: #3c373d; textcolor temp

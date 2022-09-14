@@ -10,20 +10,37 @@ const appData: AppState = {
   lists: [
     {
       id: "0",
-      text: "To Do",
-      tasks: [{ id: "c0", text: "Generate app scaffold" }],
+      text: "Orders of the day",
+      tasks: [],
     },
     {
       id: "1",
-      text: "In Progress",
-      tasks: [{ id: "c2", text: "Learn Typescript" }],
+      text: "Ongoing",
+      tasks: [],
     },
     {
       id: "2",
-      text: "Done",
-      tasks: [{ id: "c3", text: "Finished work" }],
+      text: "Complete",
+      tasks: [],
     },
   ],
+  // lists: [
+  //   {
+  //     id: "0",
+  //     text: "To Do",
+  //     tasks: [{ id: "c0", text: "Generate app scaffold" }],
+  //   },
+  //   {
+  //     id: "1",
+  //     text: "In Progress",
+  //     tasks: [{ id: "c2", text: "Learn Typescript" }],
+  //   },
+  //   {
+  //     id: "2",
+  //     text: "Done",
+  //     tasks: [{ id: "c3", text: "Finished work" }],
+  //   },
+  // ],
 };
 
 // define context

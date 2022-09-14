@@ -59,7 +59,7 @@ export const Column = ({ text, id, isPreview }: ColumnProps) => {
         <Card text={task.text} key={task.id} id={task.id} columnId={id} />
       ))}
       <AddNewItem
-        toggleButtonText="+ Add another card"
+        toggleButtonText="+ add new card"
         onAdd={(text) => dispatch(addTask(text, id))}
         dark
       />
