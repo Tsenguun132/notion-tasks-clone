@@ -62,7 +62,7 @@ export const App = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubLinkImage>hi check out my projects :)</GithubLinkImage>
+          <GithubLinkImage>hi :)</GithubLinkImage>
         </a>
       </ItemsInRow>
     </AppContainer>
