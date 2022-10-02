@@ -1,6 +1,6 @@
 # Do your tasks
 
-[Do your tasks (check me out!)](https://tasksandcats.netlify.app)
+<a href="https://tasksandcats.netlify.app" target="_blank">Do your tasks (check me out!)</a>
 
 This project was built with but not limited to:
 
